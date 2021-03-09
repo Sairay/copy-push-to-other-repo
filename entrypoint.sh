@@ -35,4 +35,4 @@ git add .
 git status
 git commit --message "add files...."
 
-git push "https://$USERNAME:$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git"  origin --set-upstream "$TARGET_BRANCH" 
+git push "https://$USERNAME:$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git"
