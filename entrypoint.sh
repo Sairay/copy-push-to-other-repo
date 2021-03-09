@@ -14,6 +14,7 @@ USEREMAIL="$5"
 mkdir targetrepo
 echo "Cloning target git repo..."
 # clone destination repo
+echo "git clone --branch $TARGET_BRANCH https://$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git targetrepo"
 git clone --branch "$TARGET_BRANCH" "https://$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git" targetrepo
 ls -la targetrepo
 
