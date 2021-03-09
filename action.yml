@@ -18,6 +18,6 @@ runs:
   args:
     - ${{ inputs.source-directory }}
     - ${{ inputs.username }}
-    - ${{ inputs.target-repo-name }}
-    - ${{ inputs.user-email }}
+    - ${{ inputs.target-repo-name }}    
     - ${{ inputs.target-branch }}
+    - ${{ inputs.useremail }}
