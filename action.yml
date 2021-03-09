@@ -9,7 +9,9 @@ inputs:
     required: true
   target-branch:
     default: 'main'
-    required: false
+    required: true
+  useremail:    
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'

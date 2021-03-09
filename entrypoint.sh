@@ -8,6 +8,7 @@ SOURCE_DIRECTORY="$1"
 USERNAME="$2"
 TARGET_REPO_NAME="$3"
 TARGET_BRANCH="$4"
+USEREMAIL="$5"
 
 
 mkdir targetrepo
@@ -25,10 +26,12 @@ ls -la
 
 echo "commit and push"
 git status
+git config --local user.email "$USEREMAIL"
+git config --local user.name "$USERNAME"
+git config --local push.default matching
+
 git add .
 git status
+git commit --message "add files...."
 
-#to avoid committing without any changes
-git diff-index --quiet HEAD || git commit --message "add files...."
-
-git push origin --set-upstream "$TARGET_BRANCH"
+git push "https://$USERNAME:$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git"  origin --set-upstream "$TARGET_BRANCH" 
