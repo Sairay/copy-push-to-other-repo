@@ -36,3 +36,5 @@ git status
 git commit --message "add files...."
 
 git push "https://$USERNAME:$API_ACCESS_TOKIN@github.com/$USERNAME/$TARGET_REPO_NAME.git"
+
+rm -rf targetrepo
